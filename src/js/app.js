@@ -30,6 +30,16 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
+  variables.twitter == null ? (variables.twitter = "Random") : true;
+  variables.github == null ? (variables.github = "Lemonaeds") : true;
+  variables.linkedin == null ? (variables.linkedin = "miguel-uranga") : true;
+  variables.instagram == null ? (variables.instagram = "limonaeds") : true;
+  variables.name == null ? (variables.name = "Sandra") : true;
+  variables.lastName == null ? (variables.lastName = "Rodriguez") : true;
+  variables.role == null ? (variables.role = "Software Developer") : true;
+  variables.country == null ? (variables.country = "Panama") : true;
+  variables.city == null ? (variables.city = "Condado") : true;
+
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
